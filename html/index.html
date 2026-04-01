@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BS Spotify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="hidden">
+    <aside class="sidebar">
+      <div class="brand">BS Spotify</div>
+      <button class="sidebtn active" data-tab="home">Início</button>
+      <button class="sidebtn" data-tab="favorites">Favoritas</button>
+      <button class="sidebtn" data-tab="history">Histórico</button>
+      <button class="sidebtn" data-tab="admin">Admin</button>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <input id="search" placeholder="Buscar música, artista ou álbum">
+        <button id="close">Fechar</button>
+      </div>
+
+      <section id="view"></section>
+    </main>
+
+    <footer class="player">
+      <div class="player-left">
+        <img id="cover" src="https://placehold.co/60x60" alt="cover">
+        <div>
+          <div id="trackTitle">Nada tocando</div>
+          <div id="trackArtist">-</div>
+        </div>
+      </div>
+
+      <div class="player-center">
+        <button id="pause">Pausar</button>
+        <button id="resume">Retomar</button>
+      </div>
+
+      <div class="player-right">
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+      </div>
+    </footer>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
